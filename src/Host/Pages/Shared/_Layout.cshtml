@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="hydro-config" />
+  <title>@ViewData["Title"] - Hydro</title>
+  <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
+  <link rel="icon" type="image/png" href="/images/logo-icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/logo-icon.png">
+  <script src="~/hydro/hydro.js" asp-append-version="true"></script>
+  <script src="~/hydro/alpine.js" asp-append-version="true"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/themes.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<header class="bg-white shadow">
+  <div class="navbar bg-base-100 shadow-sm">
+    <h1 class="text-3xl font-bold text-gray-900">@ViewData["Title"]</h1>
+  </div>
+</header>
+
+<nav class="bg-white shadow">
+        <div class="navbar bg-base-100 shadow-sm">
+            <a class="btn btn-ghost text-xl" asp-area="" asp-page="/Home/Index">Home</a>
+            <a class="btn btn-ghost text-xl" asp-area="" asp-page="/Home/Passwords">Password generator</a>
+        </div>
+</nav>
+
+<div>
+  <main>
+    @RenderBody()
+  </main>
+</div>
+
+<footer class="bg-white shadow mt-8">
+  <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-gray-500 text-sm">
+      &copy; 2025 Michael Christensen. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
